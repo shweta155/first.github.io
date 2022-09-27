@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- fa fa icon link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Style the body */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    /* Header/logo Title */
+    .header {
+      padding: 80px;
+      text-align: center;
+      background: url("https://www.w3schools.com/html/flowers.jpg") no-repeat;
+      background-size: cover;
+      overflow: hidden;
+      color: white;
+    }
+
+    /* Increase the font size of the heading */
+    .header h1 {
+      font-size: 40px;
+    }
+
+    /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+    /* .navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+} */
+
+    /* Style the navigation bar links */
+    /* .navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+} */
+
+
+    /* Right-aligned link */
+    /* .navbar a.right {
+  float: right;
+} */
+
+    /* Change color on hover */
+    /* .navbar a:hover {
+  background-color: #ddd;
+  color: black;
+} */
+
+    /* Active/current link */
+    /* .navbar a.active {
+  background-color: #666;
+  color: white;
+} */
+
+    /* Column container */
+    .row {
+      display: -ms-flexbox;
+      /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap;
+      /* IE10 */
+      flex-wrap: wrap;
+    }
+
+    /* Create two unequal columns that sits next to each other */
+    /* Sidebar/left column */
+    .side {
+      -ms-flex: 30%;
+      /* IE10 */
+      flex: 30%;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+
+    /* Main column */
+    .main {
+      -ms-flex: 70%;
+      /* IE10 */
+      flex: 70%;
+      background-color: white;
+      padding: 20px;
+    }
+
+    /* Fake image, just for this example */
+    .fakeimg {
+      background-color: red;
+      width: 100%;
+      padding: 40px;
+    }
+
+    .fakeimg a {
+      color: white;
+    }
+
+    .fakeimg1 {
+      background-color: red;
+      width: 100%;
+      padding: 20px;
+      /* margin: 2px; */
+    }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+    }
+
+    /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 700px) {
+      .row {
+        flex-direction: column;
+      }
+    }
+
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .navbar a {
+        float: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>My Website</h1>
+    <p>A <b>responsive</b> website created by me.</p>
+  </div>
+
+
+
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-lg bg-info navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">download</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+            email
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">name@gmail.com</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">name2@gmail.com</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+            services
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">part time</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">full time</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+            aboutus
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Action1</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Action2</a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+      <form class="form-inline ">
+        <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light " type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- navbar end -->
+
+  <!-- 
+<div class="navbar">
+  <a href="#" class="active">Home</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="right">Link</a>
+</div> -->
+
+  <!-- <div class="row">
+    <div class="side">
+      <h2>About Me</h2>
+      <h5> To Contact:</h5>
+      <div class="fakeimg" style="height:200px;">
+        <i class="fa fa-linkedin" style="font-size:24px; color:blue;"></i>
+        <a href="https://www.linkedin.com/in/shweta-ladne-a11aa8217/">linkedin profile</a>
+        <br>
+        <i class="fa fa-whatsapp" style="font-size:24px; color:green; "></i>
+        <a href="">whatsapp </a>
+        <br> -->
+
+        <!-- <i class="fa fa-share-alt" style="font-size:24px"></i> -->
+        <!-- <i class="fa fa-share" style="font-size:24px; color:lightsteelblue"></i>
+        <a href="">share</a>
+        <br>
+
+        <i class="fa fa-map-marker" style="font-size:24px; color:white;"></i>
+        <span> Indore,Madhya Pradesh</span>
+
+      </div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h3>More Text</h3>
+      <p>Lorem ipsum dolor sit ame.</p>
+      <div class="fakeimg1" style="height: 80px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae,
+        fugit repellat!</div><br>
+      <div class="fakeimg1" style="height:80px; ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis,
+        corporis sint?</div><br>
+      <div class="fakeimg1" style="height:80px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quibusdam
+        voluptate?</div>
+    </div>
+    <div class="main">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, 22july 2022</h5>
+      <div class="fakeimg" style="height:200px; "> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+        deleniti libero molestiae nesciunt. Magnam necessitatibus exercitationem dicta eligendi sed quasi provident
+        sequi architecto! Assumenda modi beatae mdoloribus aspernatur id! Natus, suscipit officia! Doloribus
+        ipsam nesciunt, ipsum alias molestias dolorum natus cumque et consectetur laudantium. Ipsa maxime veritatis
+        deleniti corporis velit quas, dolores at eius!</div>
+
+      + <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+      </p>
+      <br>
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, 21july, 2022</h5>
+      <div class="fakeimg" style="height:auto; width:1000%; min-width: 100px;">
+        <iframe width="500" height="200" src="https://www.youtube.com/embed/UmnCZ7-9yDY" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+      </p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <!-- for inquery form -->
+
+    <!-- <h2>Form</h2>
+    <form>
+      <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" value=""><br>
+        <label for="fname">last name:</label><br>
+        <input type="text" id="lname" value=""><br> -->
+
+        <!-- user  password -->
+<!-- 
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd"> -->
+
+        <!-- checkbox -->
+
+        <!-- <h3>select your subject:</h3>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset">
+      </form>
+  </div>  -->
+
+</body>
+
+</html>
